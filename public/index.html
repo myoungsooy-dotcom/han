@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>멀티 한국사 RPG</title>
+<style>
+body { text-align:center; font-family:sans-serif; }
+button { padding:10px; margin:5px; }
+</style>
+</head>
+<body>
+
+<h1>🔥 한국사 멀티 RPG</h1>
+
+<div id="lobby">
+  <button onclick="createRoom()">방 만들기</button><br><br>
+  <input id="roomInput" placeholder="방 코드 입력">
+  <button onclick="joinRoom()">참가</button>
+</div>
+
+<div id="game" style="display:none;">
+  <h2 id="status">대기중...</h2>
+  <h3 id="question"></h3>
+  <div id="answers"></div>
+  <h3 id="hp"></h3>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
